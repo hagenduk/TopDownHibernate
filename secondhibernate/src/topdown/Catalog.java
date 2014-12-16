@@ -3,6 +3,7 @@
  */
 package topdown;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,7 +14,7 @@ public class Catalog {
 
 	private int id;
 	private String name;
-	private List<CatalogItem> items;
+	private List<CatalogItem> items = new ArrayList<CatalogItem>();
 	
 	/**
 	 * 

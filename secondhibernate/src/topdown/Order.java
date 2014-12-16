@@ -3,6 +3,7 @@
  */
 package topdown;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,7 +41,7 @@ public class Order {
 		this.items = items;
 	}
 
-	private List<OrderItem> items;
+	private List<OrderItem> items =new ArrayList<OrderItem>();
 	
 	/**
 	 * 
