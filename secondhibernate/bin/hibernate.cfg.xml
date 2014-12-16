@@ -26,5 +26,7 @@
     	<property name="hibernate.hbm2ddl.auto">update</property>
 		<mapping resource="topdown/Catalog.hbm.xml" />
 		<mapping resource="topdown/CatalogItem.hbm.xml" />
+		<mapping resource="topdown/Order.hbm.xml" />4
+		<mapping resource="topdown/OrderItem.hbm.xml" />
   	</session-factory>
 </hibernate-configuration>
