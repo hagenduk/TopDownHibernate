@@ -81,7 +81,7 @@ public class OrderItem {
 	}
 	
 	public String toString(){
-		String returnString = "OrderItem: ID: " + this.id + " Customer: " + this.customerName + " Catalog Item: " +catalogItem.toString();
+		String returnString = "OrderItem: ID: " + this.id + " Customer: " + this.customerName + " Catalog Item: \n" +catalogItem.toString();
 		return returnString;
 	}
 

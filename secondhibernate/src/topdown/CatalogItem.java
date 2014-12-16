@@ -146,7 +146,7 @@ public class CatalogItem {
 	}
 	
 	public String toString(){
-		String returnString = "CatalogItem: ID: " + this.id + " Name: " + this.name + " Price: " + this.getPriceString() + "\n";
+		String returnString = "CatalogItem: ID: " + this.id + " Name: " + this.name + " Price: " + this.getPriceString() + " Description: " + this.description +  "\n";
 		return returnString;
 	}
 

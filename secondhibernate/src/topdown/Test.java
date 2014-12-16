@@ -24,6 +24,23 @@ public class Test {
 		c.additem(ci2);
 		
 		System.out.println(c.toString());
+		c.removeItem(ci2);
+		System.out.println("Hawaii ist ausverkauft. Dafür gibts jetzt Premium.");
+		
+		BigDecimal bd3 = new BigDecimal(20.00f);
+		CatalogItem ci3 = new CatalogItem(0, "Premium", "Eine Pizza mit erlesenem Serano-Schinken, Steak, Trüffeln, Kaviar, Gorgonzola und weiteren teuren Zutaten mit Goldstaub verziert. (Mit Käserand)", bd3, c);
+		c.additem(ci3);
+		
+		System.out.println(c.toString());
+		
+		//well time to buy something
+		Order o = new Order(1);
+		OrderItem oi = new OrderItem(0, ci3, o, "Oleksandr");
+		o.aditem(oi);
+		
+		System.out.println(o.toString());
+		
+		
 	}
 
 	/**

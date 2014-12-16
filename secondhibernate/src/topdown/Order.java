@@ -59,7 +59,7 @@ public class Order {
 	}
 	
 	public String toString(){
-		String returnString = "";
+		String returnString = "Order: ID: " + this.id + " \n" ;
 		for(OrderItem orderItem : items){
 			returnString += orderItem.toString();
 		}
