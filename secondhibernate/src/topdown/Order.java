@@ -4,7 +4,10 @@
 package topdown;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author David
@@ -12,42 +15,43 @@ import java.util.List;
  */
 public class Order {
 
-	private String id;
+	private String ORDER_ID;
+	
 	/**
-	 * @return the id
+	 * @return the oRDER_ID
 	 */
-	protected String getId() {
-		return id;
+	protected String getORDER_ID() {
+		return ORDER_ID;
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param oRDER_ID the oRDER_ID to set
 	 */
-	protected void setId(String id) {
-		this.id = id;
+	protected void setORDER_ID(String oRDER_ID) {
+		ORDER_ID = oRDER_ID;
 	}
 
 	/**
 	 * @return the items
 	 */
-	protected List getItems() {
+	protected Set getItems() {
 		return items;
 	}
 
 	/**
 	 * @param items the items to set
 	 */
-	protected void setItems(List items) {
+	protected void setItems(Set items) {
 		this.items = items;
 	}
 
-	private List<OrderItem> items =new ArrayList<OrderItem>();
+	private Set items = new HashSet();
 	
 	/**
 	 * 
 	 */
 	public Order(int gid) {
-		this.id = gid + "";
+		this.ORDER_ID = gid + "";
 	}
 	
 	public void aditem(OrderItem orderItem){
@@ -59,8 +63,8 @@ public class Order {
 	}
 	
 	public String toString(){
-		String returnString = "Order: ID: " + this.id + " \n" ;
-		for(OrderItem orderItem : items){
+		String returnString = "Order: ID: " + this.ORDER_ID + " \n" ;
+		for(OrderItem orderItem : (OrderItem[]) items.toArray()){
 			returnString += orderItem.toString();
 		}
 		return returnString;

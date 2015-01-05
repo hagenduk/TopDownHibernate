@@ -9,23 +9,24 @@ package topdown;
  */
 public class OrderItem {
 
-	private int id;
+	private int ORDERITEM_ID;
 	private CatalogItem catalogItem;
 	private Order order;
 	private String customerName;
 	
+
 	/**
-	 * @return the id
+	 * @return the oRDERITEM_ID
 	 */
-	protected int getId() {
-		return id;
+	protected int getORDERITEM_ID() {
+		return ORDERITEM_ID;
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param oRDERITEM_ID the oRDERITEM_ID to set
 	 */
-	protected void setId(int id) {
-		this.id = id;
+	protected void setORDERITEM_ID(int oRDERITEM_ID) {
+		ORDERITEM_ID = oRDERITEM_ID;
 	}
 
 	/**
@@ -74,14 +75,14 @@ public class OrderItem {
 	 * 
 	 */
 	public OrderItem(int gid, CatalogItem gitem, Order gorder, String gcustomerName) {
-		this.id=gid;
+		this.ORDERITEM_ID=gid;
 		this.catalogItem=gitem;
 		this.order=gorder;
 		this.customerName=gcustomerName;
 	}
 	
 	public String toString(){
-		String returnString = "OrderItem: ID: " + this.id + " Customer: " + this.customerName + " Catalog Item: \n" +catalogItem.toString();
+		String returnString = "OrderItem: ID: " + this.ORDERITEM_ID + " Customer: " + this.customerName + " Catalog Item: \n" +catalogItem.toString();
 		return returnString;
 	}
 

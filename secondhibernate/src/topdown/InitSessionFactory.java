@@ -41,7 +41,7 @@ public class InitSessionFactory {
 	 * <code>CONFIG_FILE_LOCATION = "/hibernate.conf.xml". 
 	 * CONFIG_FILE_LOCATION = "/com/foo/bar/myhiberstuff.conf.xml".</code>
 	 */
-	private static String CONFIG_FILE_LOCATION = "/hibernate.cfg.xml";
+	private static String CONFIG_FILE_LOCATION = "hibernate.cfg.xml";
 
 	/** The single instance of hibernate configuration */
 	private static final Configuration cfg = new Configuration();

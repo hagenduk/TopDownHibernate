@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping package="oodb.example">
-  <class name="CatalogItem" table="CATALOGITEM" >
-    	<id name="id" type="int">
+  <class name="topdown.CatalogItem" table="CATALOGITEM" >
+    	<id name="CATALOGITEM_ID" type="int">
 			<meta attribute="scope-set">protected</meta>
 			<generator class="native"></generator>
 		</id>
 		
 		<property name="name" type="string" not-null="true"/>
 		<property name="description" type="string" not-null="true"/>
-		<property name="price" type="BigDecimal" not-null="true"/>
-		<property name="numberFormat" type="numberFormat" not-null="true"/>
-		<property name="currencyFormat" type="numberFormat" not-null="true"/>
+		<property name="price" type="big_decimal" not-null="true"/>
+		<property name="numberFormat" type="DecimalFormat" not-null="true"/>
+		<property name="currencyFormat" type="DecimalFormat" not-null="true"/>
 		
 		<many-to-one
 			name="catalog"
-			column="id"
-			class="Catalog"
+			column="CATALOG_ID"
+			class="topdown.Catalog"
 			not-null="true"/>
   </class>
 </hibernate-mapping>

@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping package="oodb.example">
-  <class name="OrderItem" table="ORDERITEM" >
-    <id name="id" type="int">
+	<class name="topdown.OrderItem" table="ORDERITEM">
+		<id name="ORDERITEM_ID" type="int">
 			<meta attribute="scope-set">protected</meta>
 			<generator class="native"></generator>
 		</id>
-		<property name="customerName" type="String"/>
-		
-		<many-to-one
-			name="order"
-			column="id"
-			class="Order"
-			not-null="true"/>
-			
-		<many-to-one
-			name="catalogItem"
-			column="id"
-			class="CatalogIem"
-			not-null="true"/>	
-  </class>
+		<property name="customerName" type="string" />
+
+		<many-to-one name="order" column="ORDER_ID" class="topdown.Order"
+			not-null="true" />
+
+		<many-to-one name="catalogItem" column="CATALOGITEM_ID" class="topdown.CatalogItem"
+			not-null="true" />
+	</class>
 </hibernate-mapping>

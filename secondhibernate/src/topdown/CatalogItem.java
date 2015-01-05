@@ -16,22 +16,23 @@ import java.util.Locale;
  */
 public class CatalogItem {
 
-	private int id;
+	private int CATALOGITEM_ID;
 	private String name;
 	private String description;
 	private BigDecimal price;
+	
 	/**
-	 * @return the id
+	 * @return the cATALOGITEM_ID
 	 */
-	protected int getId() {
-		return id;
+	protected int getCATALOGITEM_ID() {
+		return CATALOGITEM_ID;
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param cATALOGITEM_ID the cATALOGITEM_ID to set
 	 */
-	protected void setId(int id) {
-		this.id = id;
+	protected void setCATALOGITEM_ID(int cATALOGITEM_ID) {
+		CATALOGITEM_ID = cATALOGITEM_ID;
 	}
 
 	/**
@@ -126,7 +127,7 @@ public class CatalogItem {
 	 * 
 	 */
 	public CatalogItem(int gid, String gname, String gdescription, BigDecimal gprice, Catalog gcatalog) {
-		this.id= gid;
+		this.CATALOGITEM_ID= gid;
 		this.name=gname;
 		this.description = gdescription;
 		this.price=gprice;
@@ -146,7 +147,7 @@ public class CatalogItem {
 	}
 	
 	public String toString(){
-		String returnString = "CatalogItem: ID: " + this.id + " Name: " + this.name + " Price: " + this.getPriceString() + " Description: " + this.description +  "\n";
+		String returnString = "CatalogItem: ID: " + this.CATALOGITEM_ID + " Name: " + this.name + " Price: " + this.getPriceString() + " Description: " + this.description +  "\n";
 		return returnString;
 	}
 

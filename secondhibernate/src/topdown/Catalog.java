@@ -4,7 +4,9 @@
 package topdown;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author David
@@ -12,31 +14,34 @@ import java.util.List;
  */
 public class Catalog {
 
-	private int id;
+	private int CATALOG_ID;
 	private String name;
-	private List<CatalogItem> items = new ArrayList<CatalogItem>();
+	private Set items = new HashSet();
 	
 	/**
 	 * 
 	 */
 	public Catalog(int gid, String gname) {
 		this.name=gname;
-		this.id=gid;
+		this.CATALOG_ID=gid;
 	}
 
+	
 	/**
-	 * @return the id
+	 * @return the cATALOG_ID
 	 */
-	protected int getId() {
-		return id;
+	protected int getCATALOG_ID() {
+		return CATALOG_ID;
 	}
 
+
 	/**
-	 * @param id the id to set
+	 * @param cATALOG_ID the cATALOG_ID to set
 	 */
-	protected void setId(int id) {
-		this.id = id;
+	protected void setCATALOG_ID(int cATALOG_ID) {
+		CATALOG_ID = cATALOG_ID;
 	}
+
 
 	/**
 	 * @return the name
@@ -55,14 +60,14 @@ public class Catalog {
 	/**
 	 * @return the items
 	 */
-	protected List<CatalogItem> getItems() {
+	protected Set getItems() {
 		return items;
 	}
 
 	/**
 	 * @param items the items to set
 	 */
-	protected void setItems(List<CatalogItem> items) {
+	protected void setItems(Set items) {
 		this.items = items;
 	}
 
@@ -75,8 +80,8 @@ public class Catalog {
 	}
 	
 	public String toString(){
-		String returnString = "Catalog: ID: " + this.id + " Name: " + this.name + "\n";
-		for(CatalogItem item : items){
+		String returnString = "Catalog: ID: " + this.CATALOG_ID + " Name: " + this.name + "\n";
+		for(CatalogItem item : (CatalogItem[]) items.toArray()){
 			returnString += item.toString();
 		}
 		return returnString;
