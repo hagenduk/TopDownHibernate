@@ -10,8 +10,6 @@
 		<property name="name" type="string" not-null="true"/>
 		<property name="description" type="string" not-null="true"/>
 		<property name="price" type="big_decimal" not-null="true"/>
-		<property name="numberFormat" type="DecimalFormat" not-null="true"/>
-		<property name="currencyFormat" type="DecimalFormat" not-null="true"/>
 		
 		<many-to-one
 			name="catalog"
