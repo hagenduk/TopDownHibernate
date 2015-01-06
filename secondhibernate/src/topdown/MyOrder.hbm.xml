@@ -2,14 +2,14 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping package="oodb.example">
  <class name="topdown.MyOrder" table="MYORDER" >
-		<id name="ORDER_ID" type="string">
+		<id name="ORDER_ID" type="int">
 			<meta attribute="scope-set">protected</meta>
 			<generator class="native"></generator>
 		</id>		
 		<set name="items" 
 			inverse="true"
 			cascade="save-update, delete, delete-orphan">
-			<key column="ORDERITEM_ID"/>
+			<key column="ORDER_ID"/>
 			<one-to-many class="topdown.OrderItem"/>
 		</set>
  </class>

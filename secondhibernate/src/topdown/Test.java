@@ -30,6 +30,7 @@ public class Test {
 		c.additem(ci2);
 		
 		System.out.println(c.toString());
+		deleteCatalogItem(ci2);
 		c.removeItem(ci2);
 		System.out.println("Hawaii ist ausverkauft. Dafür gibts jetzt Premium.");
 		

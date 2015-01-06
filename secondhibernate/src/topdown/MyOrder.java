@@ -12,19 +12,19 @@ import java.util.Set;
  */
 public class MyOrder {
 
-	private String ORDER_ID;
+	private int ORDER_ID;
 	
 	/**
 	 * @return the oRDER_ID
 	 */
-	protected String getORDER_ID() {
+	protected int getORDER_ID() {
 		return ORDER_ID;
 	}
 
 	/**
 	 * @param oRDER_ID the oRDER_ID to set
 	 */
-	protected void setORDER_ID(String oRDER_ID) {
+	protected void setORDER_ID(int oRDER_ID) {
 		ORDER_ID = oRDER_ID;
 	}
 
@@ -48,7 +48,7 @@ public class MyOrder {
 	 * 
 	 */
 	public MyOrder(int gid) {
-		this.ORDER_ID = gid + "";
+		this.ORDER_ID = gid;
 	}
 	
 	public void aditem(OrderItem orderItem){
