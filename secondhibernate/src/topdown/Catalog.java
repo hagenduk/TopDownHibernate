@@ -16,7 +16,7 @@ public class Catalog {
 
 	private int CATALOG_ID;
 	private String name;
-	private Set items = new HashSet();
+	private Set<CatalogItem> items = new HashSet<CatalogItem>();
 	
 	/**
 	 * 
@@ -60,14 +60,14 @@ public class Catalog {
 	/**
 	 * @return the items
 	 */
-	protected Set getItems() {
+	protected Set<CatalogItem> getItems() {
 		return items;
 	}
 
 	/**
 	 * @param items the items to set
 	 */
-	protected void setItems(Set items) {
+	protected void setItems(Set<CatalogItem> items) {
 		this.items = items;
 	}
 
@@ -81,7 +81,7 @@ public class Catalog {
 	
 	public String toString(){
 		String returnString = "Catalog: ID: " + this.CATALOG_ID + " Name: " + this.name + "\n";
-		for(CatalogItem item : (CatalogItem[]) items.toArray()){
+		for(CatalogItem item : items){
 			returnString += item.toString();
 		}
 		return returnString;

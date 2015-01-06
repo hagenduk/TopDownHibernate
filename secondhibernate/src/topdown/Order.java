@@ -34,18 +34,18 @@ public class Order {
 	/**
 	 * @return the items
 	 */
-	protected Set getItems() {
+	protected Set<OrderItem> getItems() {
 		return items;
 	}
 
 	/**
 	 * @param items the items to set
 	 */
-	protected void setItems(Set items) {
+	protected void setItems(Set<OrderItem> items) {
 		this.items = items;
 	}
 
-	private Set items = new HashSet();
+	private Set<OrderItem> items = new HashSet<OrderItem>();
 	
 	/**
 	 * 
@@ -64,7 +64,7 @@ public class Order {
 	
 	public String toString(){
 		String returnString = "Order: ID: " + this.ORDER_ID + " \n" ;
-		for(OrderItem orderItem : (OrderItem[]) items.toArray()){
+		for(OrderItem orderItem : items){
 			returnString += orderItem.toString();
 		}
 		return returnString;
