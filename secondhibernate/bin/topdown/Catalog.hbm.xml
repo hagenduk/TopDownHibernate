@@ -9,7 +9,7 @@
 		<property name="name" type="string"></property>
 
 		<set name="items" inverse="true" cascade="save-update, delete, delete-orphan">
-			<key column="CATALOGITEM_ID" />
+			<key column="CATALOG_ID" />
 			<one-to-many class="topdown.CatalogItem" />
 		</set>
 	</class>

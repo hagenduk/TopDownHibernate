@@ -3,17 +3,14 @@
  */
 package topdown;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
  * @author David
  *
  */
-public class Order {
+public class MyOrder {
 
 	private String ORDER_ID;
 	
@@ -50,7 +47,7 @@ public class Order {
 	/**
 	 * 
 	 */
-	public Order(int gid) {
+	public MyOrder(int gid) {
 		this.ORDER_ID = gid + "";
 	}
 	
@@ -63,7 +60,7 @@ public class Order {
 	}
 	
 	public String toString(){
-		String returnString = "Order: ID: " + this.ORDER_ID + " \n" ;
+		String returnString = "MyOrder: ID: " + this.ORDER_ID + " \n" ;
 		for(OrderItem orderItem : items){
 			returnString += orderItem.toString();
 		}

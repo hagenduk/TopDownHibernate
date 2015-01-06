@@ -11,7 +11,7 @@ public class OrderItem {
 
 	private int ORDERITEM_ID;
 	private CatalogItem catalogItem;
-	private Order order;
+	private MyOrder myOrder;
 	private String customerName;
 	
 
@@ -44,17 +44,17 @@ public class OrderItem {
 	}
 
 	/**
-	 * @return the order
+	 * @return the myOrder
 	 */
-	protected Order getOrder() {
-		return order;
+	protected MyOrder getOrder() {
+		return myOrder;
 	}
 
 	/**
-	 * @param order the order to set
+	 * @param myOrder the myOrder to set
 	 */
-	protected void setOrder(Order order) {
-		this.order = order;
+	protected void setOrder(MyOrder myOrder) {
+		this.myOrder = myOrder;
 	}
 
 	/**
@@ -74,10 +74,10 @@ public class OrderItem {
 	/**
 	 * 
 	 */
-	public OrderItem(int gid, CatalogItem gitem, Order gorder, String gcustomerName) {
+	public OrderItem(int gid, CatalogItem gitem, MyOrder gorder, String gcustomerName) {
 		this.ORDERITEM_ID=gid;
 		this.catalogItem=gitem;
-		this.order=gorder;
+		this.myOrder=gorder;
 		this.customerName=gcustomerName;
 	}
 	

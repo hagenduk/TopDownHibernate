@@ -24,7 +24,7 @@
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		<mapping resource="topdown/Catalog.hbm.xml" />
 		<mapping resource="topdown/CatalogItem.hbm.xml" />
-		<mapping resource="topdown/Order.hbm.xml" />
+		<mapping resource="topdown/MyOrder.hbm.xml" />
 		<mapping resource="topdown/OrderItem.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

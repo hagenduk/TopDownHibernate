@@ -41,7 +41,7 @@ public class Test {
 		System.out.println(c.toString());
 		
 		//well time to buy something
-		Order o = new Order(1);
+		MyOrder o = new MyOrder(1);
 		createOrder(o);
 		OrderItem oi = new OrderItem(0, ci3, o, "Oleksandr");
 		createOrderItem(oi);
@@ -136,7 +136,7 @@ public class Test {
 		}
 	}
 
-	private static void deleteOrder(Order o) {
+	private static void deleteOrder(MyOrder o) {
 		Transaction tx = null;
 		Session session = InitSessionFactory.getInstance().getCurrentSession();
 		try {
@@ -150,7 +150,7 @@ public class Test {
 		}
 	}
 
-	private static void createOrder(Order o) {
+	private static void createOrder(MyOrder o) {
 		Transaction tx = null;
 		Session session = InitSessionFactory.getInstance().getCurrentSession();
 		try {

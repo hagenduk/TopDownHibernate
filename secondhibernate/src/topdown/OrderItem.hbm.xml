@@ -8,7 +8,7 @@
 		</id>
 		<property name="customerName" type="string" />
 
-		<many-to-one name="order" column="ORDER_ID" class="topdown.Order"
+		<many-to-one name="order" column="ORDER_ID" class="topdown.MyOrder"
 			not-null="true" />
 
 		<many-to-one name="catalogItem" column="CATALOGITEM_ID" class="topdown.CatalogItem"

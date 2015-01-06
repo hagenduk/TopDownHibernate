@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping package="oodb.example">
- <class name="topdown.Order" table="ORDER" >
+ <class name="topdown.MyOrder" table="MYORDER" >
 		<id name="ORDER_ID" type="string">
 			<meta attribute="scope-set">protected</meta>
 			<generator class="native"></generator>
